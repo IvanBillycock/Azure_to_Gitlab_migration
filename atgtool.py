@@ -244,7 +244,6 @@ def create_issue(itemID):
         pass
 
 with open(filepath) as fp:
-    line = fp.readline()
     for line in fp:
         azure_id = line.replace('\n', '')
         azure_url = 'https://dis-dev-ops.ics.perm.ru/Common/CouncilOfArchitects/_apis/wit/workitems/{0}?api-version=5.0&$expand=Relations'.format(azure_id)
